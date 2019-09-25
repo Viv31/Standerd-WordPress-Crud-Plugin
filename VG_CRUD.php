@@ -136,7 +136,7 @@ add_shortcode("VG_CRUD_FORM","VG_ShortcodeForPage");
 /* Function for Deleting Custom table and Custom page that was created on plugin activation. */
 register_deactivation_hook( __FILE__, 'my_plugin_remove_database' );
 function my_plugin_remove_database() {
-		$page = get_page_by_path( 'VGCRUDPAGE' );
+		$page = get_page_by_path( 'VG-CrudPage' );
     	wp_delete_post($page->ID);
      global $wpdb;
      $delete_table_name =  'VG_CRUD_TABLE';
